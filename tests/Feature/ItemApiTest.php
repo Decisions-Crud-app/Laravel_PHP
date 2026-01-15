@@ -9,22 +9,28 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-uses(RefreshDatabase::class);
+class ItemApiTest extends TestCase
+{
+    use RefreshDatabase;
 
-test('can list items', function () {
-    Sanctum::actingAs(User::factory()->create());
-    Item::factory()->count(2)->create();
+    public function test_can_list_items()
+    {
+        Sanctum::actingAs(User::factory()->create());
+        Item::factory()->count(2)->create();
 
-    $this->getJson('/api/items')
-        ->assertOk()
-        ->assertJsonCount(2);
-});
-test('can create item', function () {
-    Sanctum::actingAs(User::factory()->create());
+        $this->getJson('/api/items')
+            ->assertOk()
+            ->assertJsonCount(2);
+    }
 
-    $this->postJson('/api/items', [
-        'name' => 'Test',
-        'code' => 'ABC123',
-        'status' => 'active'
-    ])->assertCreated();
-});
+    public function test_can_create_item()
+    {
+        Sanctum::actingAs(User::factory()->create());
+
+        $this->postJson('/api/items', [
+            'name' => 'Test',
+            'code' => 'ABC123',
+            'status' => 'active'
+        ])->assertCreated();
+    }
+}
