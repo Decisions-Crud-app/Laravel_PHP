@@ -1,3 +1,14 @@
+Use Blade and VueJS with Vue-Bootstrap and Axios to build a website that does the following:
+1. Displays a list of records
+2. Opens a modal to edit a record
+3. Saves record to the database
+Bonus points:
+● Protected API
+● Conditional records list
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
