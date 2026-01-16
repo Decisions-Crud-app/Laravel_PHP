@@ -1,10 +1,13 @@
 <?php
+
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ItemController;
+use App\Http\Controllers\Api\AuthController;
+
+
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/register', [AuthController::class, 'register']);
+
 
 Route::apiResource('items', ItemController::class)
-          ->only(['index', 'store', 'update']);
-
-/**Route::middleware('auth:sanctum')->group(function () {
-   Route::apiresource('records', RecordController::class)
-       ->only(['index', 'store', 'update']);
-});*/
+    ->only(['index', 'store', 'update', 'destroy']);

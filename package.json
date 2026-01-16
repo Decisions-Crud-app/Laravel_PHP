@@ -8,15 +8,17 @@
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.0.0",
+        "@vitejs/plugin-vue": "^6.0.3",
+        "@vue/compiler-sfc": "^3.5.26",
         "axios": "^1.13.2",
         "concurrently": "^9.0.1",
         "laravel-vite-plugin": "^2.0.0",
         "tailwindcss": "^4.0.0",
-        "vite": "^7.0.7"
+        "vite": "^7.0.7",
+        "vue": "^3.5.26"
     },
     "dependencies": {
         "bootstrap": "^5.3.8",
-        "bootstrap-vue-3": "^0.5.1",
-        "vue": "^3.5.26"
+        "bootstrap-vue-3": "^0.5.1"
     }
 }
